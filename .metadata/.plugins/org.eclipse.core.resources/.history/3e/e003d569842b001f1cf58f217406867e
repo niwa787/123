@@ -1,0 +1,81 @@
+package com.boostmytool.beststore.models;
+
+import java.sql.Date;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.web.multipart.MultipartFile;
+
+public class ProductDto {
+
+    @NotEmpty(message = "Topic cannot be empty")
+    private String topic;
+
+    @NotEmpty(message = "Status cannot be empty")
+    private String status;
+
+    @NotEmpty(message = "Type cannot be empty")
+    private String type;
+
+    @NotEmpty(message = "Description cannot be empty")
+    private String description;
+
+    @NotNull(message = "Update date cannot be null")
+    private Date updateDate;
+
+    private MultipartFile imageFile;
+
+	public String getTopic() {
+		return topic;
+	}
+
+	public void setTopic(String topic) {
+		this.topic = topic;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public MultipartFile getImageFile() {
+		return imageFile;
+	}
+
+	public void setImageFile(MultipartFile imageFile) {
+		this.imageFile = imageFile;
+	}
+
+	
+	
+	
+	
+}
